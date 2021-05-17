@@ -1,19 +1,16 @@
 <?php
 
 class User {
-    private $mail;
     private $id;
+    private $mail;
     private $address;
     private $payment;
 
-    public function setMail($mail)
-    {
+    public function __construct($id, $mail, $address, $payment) {
+        $this->id = $id;
         $this->mail = $mail;
-    }
-
-    public function getMail()
-    {
-        return $this->mail;
+        $this->address = $address;
+        $this->payment = $payment;
     }
 
     public function setId($id)
@@ -24,6 +21,16 @@ class User {
     public function getId()
     {
         return $this->id;
+    }
+
+    public function setMail($mail)
+    {
+        $this->mail = $mail;
+    }
+
+    public function getMail()
+    {
+        return $this->mail;
     }
 
     public function setAddress($address)
