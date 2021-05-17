@@ -1,36 +1,36 @@
 <?php
 
 class User {
-    private $id;
-    private $mail;
+    private $username;
+    private $password;
     private $address;
-    private $payment;
+    private $account_type = 'basic';
 
-    public function __construct($id, $mail, $address, $payment) {
-        $this->id = $id;
-        $this->mail = $mail;
+    public function __construct($username, $password, $address, $account_type) {
+        $this->id = $username;
+        $this->mail = $password;
         $this->address = $address;
-        $this->payment = $payment;
+        $this->account_type = $account_type;
     }
 
-    public function setId($id)
+    public function setId($username)
     {
-        $this->id = $id;
+        $this->username = $username;
     }
 
     public function getId()
     {
-        return $this->id;
+        return $this->username;
     }
 
-    public function setMail($mail)
+    public function setMail($password)
     {
-        $this->mail = $mail;
+        $this->password = $password;
     }
 
     public function getMail()
     {
-        return $this->mail;
+        return $this->password;
     }
 
     public function setAddress($address)
@@ -43,13 +43,13 @@ class User {
         return $this->address;
     }
 
-    public function setPayments($payments)
+    public function setAccountType($account_type)
     {
-        $this->payments = $payments;
+        $this->account_type = $account_type;
     }
 
-    public function getPayments()
+    public function getAccountType()
     {
-        return $this->payments;
+        return $this->account_type;
     }
 }
