@@ -6,14 +6,15 @@ class Product {
     private $category;
     private $brand;
     private $price;
+    private $status;
 
-    public function __construct($id, $gender, $category, $brand, $price) {
-        $this->id = $id;
-        $this->gender = $gender;
-        $this->category = $category;
-        $this->brand = $brand;
-        $this->price = $price;
-    }
+public function __construct($id, $gender, $category, $brand, $price, $status) {
+    $this->id = $id;
+    $this->gender = $gender;
+    $this->category = $category;
+    $this->brand = $brand;
+    $this->price = $price;
+}
 
 public function setGender($gender)
     {
