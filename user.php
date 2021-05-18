@@ -1,16 +1,25 @@
 <?php
 
+require_once "./CreditCard.php";
+
 class User {
+    use CreditCard;
+
     private $username;
     private $password;
     private $address;
-    private $account_type = 'basic';
 
-    public function __construct($username, $password, $address, $account_type) {
+    public function __construct($username, $password, $address, $number, $expiration_date, $cvc) {
+        if ($expiration_date < "11-2022") {
+            throw new \Exception("La carta è scaduta!");
+        }
+
         $this->id = $username;
         $this->mail = $password;
         $this->address = $address;
-        $this->account_type = $account_type;
+        $this->setNumber($number);
+        $this->setExpirationDate($expiration_date);
+        $this->setCvc($cvc);
     }
 
     public function setId($username)

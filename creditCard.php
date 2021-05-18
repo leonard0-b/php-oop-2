@@ -32,9 +32,8 @@ trait CreditCard {
 
     public function getCVC()
     {
-        return $this->cvc
+        return $this->cvc;
     }
 }
-
 
 ?>

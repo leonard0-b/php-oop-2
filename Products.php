@@ -1,29 +1,40 @@
 <?php
 
 class Product {
+
     private $id;
-    private $gender;
+    private $name;
     private $category;
     private $brand;
     private $price;
     private $status;
 
-public function __construct($id, $gender, $category, $brand, $price, $status) {
+public function __construct($id, $name, $category, $brand, $price, $status) {
     $this->id = $id;
-    $this->gender = $gender;
+    $this->name = $name;
     $this->category = $category;
     $this->brand = $brand;
     $this->price = $price;
 }
 
-public function setGender($gender)
+public function setId($id)
     {
-        $this->gender = $gender;
+        $this->id = $id;
     }
 
-public function getGender()
+public function getId()
     {
-        return $this->gender;
+        return $this->id;
+    }
+
+public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+public function getName()
+    {
+        return $this->name;
     }
 
 public function setCategory($category)
@@ -31,7 +42,7 @@ public function setCategory($category)
         $this->category = $category;
     }
 
-public function getCategory($category)
+public function getCategory()
     {
         return $this->category;
     }
@@ -41,7 +52,7 @@ public function setBrand($brand)
         $this->brand = $brand;
     }
 
-public function getBrand($brand)
+public function getBrand()
     {
         return $this->brand;
     }
@@ -56,13 +67,13 @@ public function getPrice()
         return $this->price;
     }
 
-public function setId($id)
+public function setStatus($status)
     {
-        $this->id = $id;
+        $this->status = $status;
     }
 
-public function get()
+public function getStatus()
     {
-        return $this->id;
+        return $this->status;
     }
 }
